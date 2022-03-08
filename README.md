@@ -4,16 +4,12 @@
 <br>
 Part A: Implement a function that iteratively calculates the Nth Fibonacci number, given an integer N.
 <br>
-Part B: Re-Implement the function from part A using recursion.
-
-
+Part B: Re-Implement the function from part A using recursion. Which version has better performance for large values of N? Why?
 <br>
 
 **Python Exercise 2:** FizzBuzz
 <br>
 Write a function that plays FizzBuzz (https://en.wikipedia.org/wiki/Fizz_buzz) for the numbers from 1 to N.
-
-
 <br>
 
 **Python Exercise 3:** Recursive Binary Search
@@ -23,7 +19,6 @@ Part A: Randomly generate an array containing 500 elements - make sure it's sort
 Part B: Implement recursive binary search, returning -1 if the element is not found. Use this to search the array in part A for a given element.
 <br>
 Part C: Measure the time taken of binary search as array sizes increase. How does it perform for 2500 elements? 1,250,000?
-
 <br>
 
 **Python Exercise 4:** Basic Markov Chain
@@ -44,10 +39,10 @@ This can be summarized with the following table:
 <br>
 
 
-Using Python, this table can be implemented as a dictionary associating states with a tuple of probabilities - these probabilities themselves are a tuple containing the next state and the associated probability of transitioning to the state. In the case of this exercise, we can consider the different states of the model to be English words. For example, a predictive keyboard like those on smartphones could be implemented using Markov chains - hopefully no one does this, though. When the user types a word, the model can return the 3 words most likely to occur after the recently entered word. I'd hope predictive keyboards are not implemented using this method. This represents a circumstance In the real world where the probabilities of the model of the can change as the software runs for longer and is provided with more input data.
+Using Python, this table can be implemented as a dictionary associating states with a tuple of probabilities - these probabilities themselves are a tuple containing the next state and the associated probability of transitioning to the state. In the case of this exercise, we can consider the different states of the model to be English words. For example, a predictive keyboard like those on smartphones could be implemented using Markov chains - hopefully no one does this, though. When the user types a word, the model can return the 3 words most likely to occur after the recently entered word. This represents a circumstance in the real world where the probabilities of the model can change as the software runs for longer and is provided with more input data.
 <br>
 <br>
-Part A: Given the sample text file I'll provide in the repository, generate a probability dictionary, counting which words are most likely to follow other words.
+Part A: Given the sample text file (markovChain/markovTestData.txt) generate a probability dictionary, counting which words are most likely to follow other words. The file markovOutput contains a reference probability dictionary to compare against.
 <br>
 Part B: Using the probability dictionary, make a function that can generate a paragraph!
 <br>
