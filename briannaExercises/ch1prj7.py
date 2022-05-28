@@ -1,8 +1,21 @@
+# Brianna Albergaria
+# Python Exercises
+
+# Statisticians would like to have a set of functions to compute the median and
+# mode of a list of numbers. The median is the number that would appear at the
+# midpoint of a list if it were sorted. The mode is the number that appears most
+# frequently in the list. Define these functions in a module named stats.py. Also
+# include a function named mean, which computes the average of a set of numbers.
+# Each function expects a list of numbers as an argument and returns a single
+# number.
+
+###############################################################################
+
 """Functions to find mean, median, and mode."""
 
 def mean(a):
     """Returns the mean of a given list, a."""
-    return sum(a)/len(a) #average is the sum/length of list
+    return sum(a)/len(a) # average is the sum/length of list
 
 def median(a):
     """Returns the median of a given list, a."""
@@ -33,4 +46,12 @@ def mode(a):
         elif count == prevHighest: # check for multiple modes
             modeList.append(a[i]) # if True, append it to the mode list
 
-    return modeList # return the hwole mode list
+    return modeList # return the whole mode list
+
+"""Program"""
+
+a = [1,2,3,3,3,4,4,4,5,6] # initialize arbitrary list
+
+print(f"The mean is {mean(a)}.")
+print(f"The median is {median(a)}.")
+print(f"The mode(s) is(are) {mode(a)}.")

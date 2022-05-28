@@ -14,7 +14,7 @@ n = int(input("Enter the number of iterations: ")) # prompt user for input
 toggleSign = 1 # initialize sign toggle variable
 piEstimate = 0 # initialize current estimate for pi
 
-for i in range(1,n): # for loop that iterattes n times (defined by user)
+for i in range(1,n): # for loop that iterates n times (defined by user)
     piEstimate += toggleSign * 4/(2*i-1) # add sum to previous estimate
     toggleSign *= -1 # toggle sign for each iteration
 
