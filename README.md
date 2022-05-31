@@ -60,10 +60,9 @@ Part B: Using "git init", create a repository. What is the difference between a 
 
 **Git Exercise 2:** Authentication, Remote Repo Linkage
 <br>
-Part A: GitHub requires Linux users to authenticate with SSH. "ssh-keygen" will generate a SSH key pair, which can be linked to your GitHub account
+Part A: Using "git remote", connect your forked GitHub repository to your local repository.
 <br>
-Part B: Using "git remote", connect your GitHub repository to your local repository. If you're using an SSH token, use the SSH repository link!
-<br>
+Part B: usig "git pull", bring your local repository up to date with the one you forked.
 <br>
 
 **Git Exercise 3:** Commits, Pushes and Merges
