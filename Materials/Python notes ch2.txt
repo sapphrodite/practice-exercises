@@ -1,0 +1,36 @@
+1.Collections
+2.Linear Collections
+3.Hierarchial Collections
+4.Graphical Collections
+5.Unordered Collections
+6.Sorted Collections
+
+Need help?: www.python.org or enter the function call help(<component>)1.  
+1.Collections
+A collection is a group of zero or more items that can be treated as a conceptual unit.
+Are also called abstract data types (ADTs)
+----------------------------------------------------------
+2.Linear Collections
+The items in a linear collection, are ordered by position.
+ex: grocery lists, line of customers
+----------------------------------------------------------
+3.Hierarchial Collections
+Data items in hierarchical collections are ordered in a structure resembling an upsidedown tree.
+(Parents and children)
+Special type is a binary search tree (BST)
+ex: a file directory system, a book's table of contents
+----------------------------------------------------------
+4.Graphical Collections
+A graph collection, also called a graph, 
+is a collection in which each data item can have many predecessors and many successors.
+ex: maps of airline routes, electriical wiring diagrams
+----------------------------------------------------------
+5.Unordered Collections
+items in an unordered collection are not in any particular order,
+No predeccessors or successors
+ex: bag of marbles
+----------------------------------------------------------
+6.Sorted Collections
+Imposes a natural ordering on its items. 
+Sorted collections don't need to be linear or ordered by position. 
+ex: sorted list, entries in a phone book, class roster

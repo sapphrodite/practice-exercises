@@ -1,0 +1,295 @@
+1.Comments
+2.Lexical Elements
+3.Python Naming Conventions
+4.String Literals
+5.Operators and Expressions
+6.Function Calls
+7.The print Function
+8.The input Function
+9.Type Conversion Functions and Mixed-Mode Operations
+10.Optional and Keyword Function Arguments
+11.Variables and Assignment Statements
+12.Import Statements
+13.Conditional Statements
+14.Using if __name__ == "__main__"
+15.Operators
+16.Formatting Strings
+17.Objects and Method Calls
+18.Lists
+19.Loops Over Sequences
+20.Dictionaries
+21.Searching for a Value
+22.Pattern Matching
+23.Function Definitions
+24.Recursive Functions
+25.Higher-Order Functions
+26.Text File Output
+27.Reading Text from a Text File
+28.Pickling
+29.Creating New Classes
+Need help?: www.python.org or enter the function call help(<component>) 
+----------------------------------------------------------
+1.Comments 
+-being with #
+----------------------------------------------------------
+2.Lexical Elements
+-if, while, def
+----------------------------------------------------------
+3.Python Naming Conventions
+Variable: salary, hoursWorked, isAbsent
+Constant: ABSOLUTE_ZERO, INTEREST_RATE
+Function or method: printResults, cubeRoot, isEmpty
+Class: BankAccount, SortedSet
+*All python names appear black, functions appear blue
+----------------------------------------------------------
+4.String Literals
+print("")
+print("""Embedding a
+line break with triple quotes""")
+\n = newline
+\t = tab
+----------------------------------------------------------
+5.Operators and Expressions
+Arithmetic expressions use the standard operators (+, –, *, /)
+The ** operator is used for exponentiation.
+The comparison operators <, <=, >, >=, ==, and != work with numbers and strings.
+The logical operators and, or, and not
+The subscript operator is []
+The selector operator is .
+The operators have the standard precedence
+----------------------------------------------------------
+6.Function Calls
+Function’s name followed by a parenthesized list of arguments. 
+For example,
+min(5, 2) # Returns 2
+Python includes a few standard functions, such as abs and round.
+----------------------------------------------------------
+7.The print Function
+The standard output function print displays its arguments on the console.
+ex: print("hello world!")
+----------------------------------------------------------
+8.The input Function
+This function takes an optional string as an argument and prints this
+string, without a line break, to prompt the user for the input.
+ex: int(input("Enter the smaller number: "))
+ex2: input("Enter a color: ")
+----------------------------------------------------------
+9.Type Conversion Functions and Mixed-Mode Operations
+You can use some data type names as type conversion functions.
+ex: radius = float(input("Radius: "))
+    print("The area is", 3.14 * radius ** 2)
+----------------------------------------------------------
+10.Optional and Keyword Function Arguments
+Functions may allow optional arguments, which can be named with keywords when the
+function is called. 
+For example, the print function by default outputs a newline after its arguments are displayed. 
+To prevent this from happening, you can give the optional argument end a value of the empty string, as follows:
+print("The cursor will stay on this line, at the end", end = "")
+----------------------------------------------------------
+11.Variables and Assignment Statements
+The syntax of a simple assignment statement is <identifier> = <expression>
+ex: PI=3.1416
+Several variables can be introduced in the same assignment statement
+ex: minValue, maxValue = 1, 100
+To swap the values of the variables a and b, you write
+a, b = b, a
+----------------------------------------------------------
+12.Import Statements
+The import statement makes visible to a program the identifiers from another module.
+ex: import math
+ex2: from math import sqrt
+     print(sqrt(2))
+ex3: from math import pi, sqrt
+     print(sqrt(2) * pi)
+----------------------------------------------------------
+13.Conditional Statements
+ex: if x > y:
+    	print("x is greater than y")
+    elif x < y:
+    	print("x is less than y")
+    else:
+    	print("x is equal to y")
+----------------------------------------------------------
+14.Using if __name__ == "__main__"
+if __name__ == "__main__":main()
+The purpose of this if statement is to allow the programmer either to run the module
+as a standalone program or to import it from the shell or another module.
+----------------------------------------------------------
+15.Operators
+A variation of the subscript, called the slice operator, 
+is what you use to obtain a substring of a string. 
+The syntax of the slice is <a string>[<lower>:<upper>]
+ex:"greater"[:] # Returns "greater"
+   "greater"[2:] # Returns "eater"
+   "greater"[:2] # Returns "gr"
+   "greater"[2:5] # Returns "eat"
+----------------------------------------------------------
+16.Formatting Strings
+ex1:
+>>> for exponent in range(7, 11):
+	print(exponent, 10 ** exponent)
+7 10000000
+8 100000000
+9 1000000000
+10 10000000000
+>>>
+ex2:
+>>> for exponent in range(7, 11):
+	print("%-3d%12d" % (exponent, 10 ** exponent))
+7     10000000
+8    100000000
+9   1000000000
+10 10000000000
+ex3: (float) 
+>>> salary = 100.00
+>>> print("Your salary is $" + str(salary))
+Your salary is $100.0
+>>> print("Your salary is $%0.2f" % salary)
+Your salary is $100.00
+>>>
+ex3: %<field width>.<precision>f
+>>> "%6.3f" % 3.14
+’ 3.140’
+----------------------------------------------------------
+17.Objects and Method Calls
+dir(str) returns a list of the names of the methods recognized by string objects
+ex1:
+"greater".isupper() # Returns False
+"greater".upper() # Returns "GREATER"
+"greater".startswith("great") # Returns True
+ex2:
+len("greater") # Is equivalent to "greater".__len__()
+"great" + "er" # Is equivalent to "great".__add__("er")
+"e" in "great" # Is equivalent to "great".__contains__("e")
+----------------------------------------------------------
+18.Lists
+ex:
+[] # An empty list
+["greater"] # A list of one string
+["greater", "less"] # A list of two strings
+["greater", "less", 10] # A list of two strings and an int
+["greater", ["less", 10]] # A list with a nested list
+The most commonly used list mutator methods are append, insert, pop, remove, and sort. 
+Here are some examples of their use:
+testList = [] # testList is []
+testList.append(34) # testList is [34]
+testList.append(22) # testList is [34, 22]
+testList.sort() # testList is [22, 34]
+testList.pop() # Returns 22; testList is [34]
+testList.insert(0, 22) # testList is [22, 34]
+testList.insert(1, 55) # testList is [22, 55, 34]
+testList.pop(1) # Returns 55; testList is [22, 34]
+testList.remove(22) # testList is [34]
+testList.remove(55) # raises ValueError
+The string methods split and join extract a list of words from a string 
+and glue a list of words together to form a string, respectively:
+"Python is cool".split() # Returns [’Python’, ’is’, ’cool’]
+" ".join(["Python", "is", "cool"]) # Returns ’Python is cool’
+----------------------------------------------------------
+19.Loops Over Sequences
+For example, the following code segment prints the items in a list:
+testList = [67, 100, 22]
+for item in testList:
+	print(item)
+----------------------------------------------------------
+20.Dictionaries
+A dictionary contains zero or more entries. Each entry associates a unique key with a value.
+ex:
+{} # An empty dictionary
+{"name":"Ken"} # One entry
+{"name":"Ken", "age":61} # Two entries
+{"hobbies":["reading", "running"]} # One entry, value is a list
+----------------------------------------------------------
+21. Searching for a Value
+The programmer can search strings, lists, tuples, or dictionaries for a given value by
+running the in operator with the value and the collection.
+----------------------------------------------------------
+22.Pattern Matching
+Here is the code to accomplish this, using the subscript
+operator:
+rgbTuple = colorTuple[0]
+hexString = colorTuple[1]
+r = rgbTuple[0]
+g = rgbTuple[1]
+b = rgbTuple[2]
+Using pattern matching, you can accomplish this task in a single line of code, as follows:
+((r, g, b), hexString) = rgbTuple
+----------------------------------------------------------
+23.Function Definitions
+The syntax of a Python function definition is
+def <function name>(<list of parameters>):
+    <sequence of statements>
+ex:
+def square(n):
+   """Returns the square of n."""
+   result = n ** 2
+   return result
+----------------------------------------------------------
+24.Recursive Functions
+A recursive function is a function that calls itself.
+----------------------------------------------------------
+25.Higher-Order Functions
+A higher-order function is a function that receives another function as an argument and applies it in some way.
+Python includes two built-in higher-order functions, map and filter.
+ex1:
+The code map(str, oldList)
+creates the iterable object containing the strings, 
+and the code newList = list(map(str, oldList))
+creates a new list from that object.
+ex2:
+Suppose you want to drop all of the zero grades from a list of exam scores. 
+The following loop would accomplish this:
+newList = []
+for number in oldList:
+   if number > 0: newList.append(number)
+ex3:
+Thus, assuming the programmer has already defined the Boolean function isPositive, the
+code filter(isPositive, oldList)
+creates the iterable object containing the non-zero grades, and the code
+newList = list(filter(isPositive, oldList)) creates a new list from that object.
+----------------------------------------------------------
+26.Text File Output
+The mode string is ’r’ for input files and ’w’ for output files
+The following code opens a file object on a file named myfile.txt for output:
+>>> f = open("myfile.txt", ’w’)
+The next statement writes two lines of text to the file:
+>>> f.write("First line.\nSecond line.\n")
+When all the outputs are finished, the file should be closed using the method close, as follows:
+>>> f.close()
+----------------------------------------------------------
+27.Reading Text from a Text File
+Here is the code for opening myfile.txt for input:
+>>> f = open("myfile.txt", ’r’)
+The next session with the shell shows how to use the method read:
+>>> text = f.read()
+>>> text
+’First line.\nSecond line.\n’
+>>> print(text)
+First line.
+Second line.
+>>>
+Second way to read text
+>>> f = open("myfile.txt", ’r’)
+>>> for line in f:
+        print(line)
+First line.
+Second line.
+>>>
+----------------------------------------------------------
+28.Pickling
+ex:
+import pickle
+lyst = [60, "A string object", 1977]
+fileObj = open("items.dat", "wb")
+Files and Their Operations 31
+for item in lyst:
+    pickle.dump(item, fileObj)
+fileObj.close()
+----------------------------------------------------------
+29.Creating New Classes
+A class describes the data and the methods pertaining to a set of objects.
+The syntax of a Python class definition is
+def <class name>(<parent class name>):
+    <class variable assignments>
+    <instance method definitions>
+----------------------------------------------------------
